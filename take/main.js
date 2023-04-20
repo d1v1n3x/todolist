@@ -1,31 +1,12 @@
-var todos = [
-    {
-        id: 1000,
-        status: true,
-        text: "遊びに行きたい"
-    },
-    {
-        id: 999,
-        status: false,
-        text: "遊びに行きたい"
-    },
-    {
-        id: 998,
-        status: true,
-        text: "遊びに行きたい"
-    },
-    {
-        id: 997,
-        status: false,
-        text: "遊びに行きたい"
-    },
+var todosString = localStorage.getItem('todos')
+var todos = JSON.parse(todosString) || []
 
-]
 var selected = "All"
 
 var list = document.getElementById("list")
 
 function render(ls = todos) {
+    localStorage.setItem("todos", JSON.stringify(ls))
     const tmp = ls.filter(function (t) {
         var s = true
         switch (selected) {
