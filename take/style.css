@@ -104,10 +104,10 @@ h1 {
   border: none;
   outline: none;
   cursor: pointer;
-  color: darkred;
+  color: black;
 }
 #list > .row > button:hover {
-  color: darkred;
+  color: black;
 }
 #list > .row > .checkbox {
   color: #ccc;
@@ -139,5 +139,5 @@ h1 {
   gap: 1rem;
 }
 .actions > div > button.active {
-  border: 1px solid darkred;
+  border: 1px solid black;
 }
